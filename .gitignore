@@ -1,0 +1,4 @@
+# Don't commit actual configs with secrets
+config/settings.json
+.env
+*.secret

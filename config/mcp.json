@@ -1,0 +1,19 @@
+{
+  "mcpServers": {
+    "api-lab": {
+      "command": "npx",
+      "args": ["-y", "api-lab-mcp"]
+    },
+    "brave-search": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-brave-search"],
+      "env": {
+        "BRAVE_API_KEY": "YOUR_BRAVE_API_KEY_HERE"
+      }
+    },
+    "codegraph": {
+      "command": "npx",
+      "args": ["-y", "@lum1104/codegraph-mcp"]
+    }
+  }
+}
