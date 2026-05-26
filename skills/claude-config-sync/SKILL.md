@@ -9,8 +9,8 @@ description: Use when the user asks to sync Claude Code config, push skills to G
 
 Sync custom Claude Code skills, agents, hooks, and MCP config to the `claude-config-sync` GitHub repo for cross-device portability.
 
-**Sync repo:** `c:\Users\admin\Desktop\claude-config-sync`
-**GitHub:** `git@github.com:wuwenjie0307/claude-config-sync.git`
+**Sync repo:** `{{REPO_PATH}}`
+**GitHub:** `git@github.com:{{GITHUB_USER}}/claude-config-sync.git`
 
 ## When to Use
 
@@ -78,4 +78,4 @@ Record this sync operation in the Obsidian vault under `projects/claude-config-s
 | Syncing Understand-Anything skills | Those are plugin skills, skip them |
 | Forgetting to push after commit | Always `git push` after commit |
 | Not updating README when adding new custom skill | Update the README skill list and the custom skills list in this file |
-| Sync path pointing to wrong repo | Always verify `$REPO` = `c:\Users\admin\Desktop\claude-config-sync` |
+| Sync path pointing to wrong repo | Always verify `$REPO` = `{{REPO_PATH}}` |

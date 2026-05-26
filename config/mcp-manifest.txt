@@ -1,0 +1,7 @@
+# MCP Server Packages — one npm package per line
+# Lines starting with # are ignored
+# Install script reads this file to pre-install packages
+
+api-lab-mcp
+@modelcontextprotocol/server-brave-search
+@lum1104/codegraph-mcp

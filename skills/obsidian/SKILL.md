@@ -1,6 +1,6 @@
 ---
 name: obsidian
-description: Use when the user asks to record a bug, log a changelog, add a new project to Obsidian, or manage their Obsidian vault. Also use proactively when starting work on a project (debugging, features, code review) — load context from the vault first to check past bugs, changelogs, and project notes at C:\Users\admin\Desktop\Obsidian
+description: Use when the user asks to record a bug, log a changelog, add a new project to Obsidian, or manage their Obsidian vault. Also use proactively when starting work on a project (debugging, features, code review) — load context from the vault first to check past bugs, changelogs, and project notes at {{VAULT_PATH}}
 ---
 
 # Obsidian Vault Manager
@@ -9,7 +9,7 @@ description: Use when the user asks to record a bug, log a changelog, add a new 
 
 Manage the user's Obsidian vault through direct markdown file operations. The vault is a local knowledge base that tracks projects, bugs, and changelogs independently of any project repository.
 
-**Vault location:** `C:\Users\admin\Desktop\Obsidian`
+**Vault location:** `{{VAULT_PATH}}`
 
 ## Vault Structure
 
@@ -43,7 +43,7 @@ Obsidian/
 
 **Step 1 — Check if project exists in vault:**
 ```bash
-ls "C:/Users/admin/Desktop/Obsidian/projects/{project-name}/" 2>/dev/null
+ls "{{VAULT_PATH}}/projects/{project-name}/" 2>/dev/null
 ```
 
 **Step 2 — If found, read the overview and scan recent records:**
@@ -144,7 +144,7 @@ Every changelog MUST include: **改动类型** (checked), **改动内容**, **�
 
 | Mistake | Fix |
 |---------|-----|
-| Putting vault files inside the project directory | Always write to `C:\Users\admin\Desktop\Obsidian/`, never inside the project |
+| Putting vault files inside the project directory | Always write to `{{VAULT_PATH}}/`, never inside the project |
 | Forgetting to update `00-总览.md` when adding a project | Always append the project link to the entry page |
 | Skipping root cause in bug reports | Always include WHY the bug happened, not just the fix |
 | Using spaces in filenames | Use hyphens: `login-timeout-fix.md` not `login timeout fix.md` |
@@ -152,7 +152,7 @@ Every changelog MUST include: **改动类型** (checked), **改动内容**, **�
 
 ## Red Flags
 
-- Writing to the wrong path (project dir instead of vault) — double-check the path starts with `C:\Users\admin\Desktop\Obsidian\`
+- Writing to the wrong path (project dir instead of vault) — double-check the path starts with `{{VAULT_PATH}}\`
 - Creating a bug record without root cause — wait and ask the user if cause is unknown
 - Adding a project without scanning its actual directory structure first
 - Jumping into debugging without checking vault for related past bugs — always load context first (Operation 0)
