@@ -6,12 +6,12 @@
 
 **Windows (PowerShell):**
 ```powershell
-iwr -useb https://raw.githubusercontent.com/<YOUR_REPO>/main/install.ps1 | iex
+iwr -useb https://raw.githubusercontent.com/wuwenjie0307/claude-config-sync/main/install.ps1 | iex
 ```
 
 **macOS / Linux:**
 ```bash
-bash <(curl -fsSL https://raw.githubusercontent.com/<YOUR_REPO>/main/install.sh)
+bash <(curl -fsSL https://raw.githubusercontent.com/wuwenjie0307/claude-config-sync/main/install.sh)
 ```
 
 **本地安装:**
@@ -31,6 +31,7 @@ bash install.sh
 |---|---|---|
 | `obsidian` | Obsidian Vault 管理 — 项目添加、Bug 记录、更新日志、上下文加载 | 自定义创建 |
 | `mysql-query` | MySQL 直连查询（MCP 不可用时的备选方案） | 自定义创建 |
+| `claude-config-sync` | 一键同步 Claude Code 配置到 GitHub | 自定义创建 |
 
 ### Plugin Skills（通过插件市场安装）
 
