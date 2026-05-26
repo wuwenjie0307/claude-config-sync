@@ -109,7 +109,7 @@ claude-config-sync/
 │   ├── mcp.json                        # MCP Server 配置模板
 │   ├── mcp-manifest.txt                # MCP 包列表（安装脚本读取）
 │   ├── hooks.json                      # Hooks 配置
-│   └── settings.template.json          # 模型配置模板（按需参考）
+│   └── settings.template.json          # 模型配置（Anthropic 原生 + DeepSeek 双模板）
 └── skills/
     ├── obsidian/SKILL.md
     ├── mysql-query/SKILL.md
@@ -134,6 +134,13 @@ bash install.sh --vault-path ~/Documents/Obsidian --github-user yourname
 2. 编辑 `~/.claude/settings.json` → 填入模型 API Key
 3. 打开 Claude Code → 运行 `/plugin install understand-anything`
 4. 重启 Claude Code
+
+## 已知限制
+
+| 风险 | 说明 |
+|---|---|
+| 第三方依赖 | `@lum1104/codegraph-mcp` 和 `Understand-Anything` 插件由个人维护，无 fallback 方案。若停更需自行寻找替代。 |
+| SSH / Git 依赖 | 安装脚本假设已配置好 GitHub SSH 密钥和 `git`，未处理 HTTPS 回退。 |
 
 ## 回滚
 

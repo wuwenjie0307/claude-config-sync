@@ -6,7 +6,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "if [ -f .understand-anything/config.json ] && grep -q '\"autoUpdate\".*true' .understand-anything/config.json 2>/dev/null && [ -f .understand-anything/meta.json ] && [ -f .understand-anything/knowledge-graph.json ]; then stored=$(node -p \"try{JSON.parse(require('fs').readFileSync('.understand-anything/meta.json','utf8')).gitCommitHash}catch(e){''}\" 2>/dev/null); current=$(git rev-parse HEAD 2>/dev/null); [ -n \"$stored\" ] && [ -n \"$current\" ] && [ \"$stored\" != \"$current\" ] && echo '[understand-anything] Knowledge graph stale (HEAD changed). Read ${CLAUDE_PLUGIN_ROOT}/hooks/auto-update-prompt.md and update the graph.' || true; else true; fi"
+            "command": "if [ -f .understand-anything/config.json ] && grep -q '\"autoUpdate\".*true' .understand-anything/config.json 2>/dev/null && [ -f .understand-anything/meta.json ] && [ -f .understand-anything/knowledge-graph.json ]; then stored=$(node -p \"try{JSON.parse(require('fs').readFileSync('.understand-anything/meta.json','utf8')).gitCommitHash}catch(e){''}\" 2>/dev/null); current=$(git rev-parse HEAD 2>/dev/null); [ -n \"$stored\" ] && [ -n \"$current\" ] && [ \"$stored\" != \"$current\" ] && echo \"[understand-anything] Knowledge graph stale (HEAD changed). Read ${CLAUDE_PLUGIN_ROOT}/hooks/auto-update-prompt.md and update the graph.\" || true; else true; fi"
           }
         ]
       }
@@ -16,7 +16,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "if [ -f .understand-anything/config.json ] && grep -q '\"autoUpdate\".*true' .understand-anything/config.json 2>/dev/null && [ -f .understand-anything/meta.json ] && [ -f .understand-anything/knowledge-graph.json ]; then stored=$(node -p \"try{JSON.parse(require('fs').readFileSync('.understand-anything/meta.json','utf8')).gitCommitHash}catch(e){''}\" 2>/dev/null); current=$(git rev-parse HEAD 2>/dev/null); [ -n \"$stored\" ] && [ -n \"$current\" ] && [ \"$stored\" != \"$current\" ] && echo '[understand-anything] Knowledge graph stale (HEAD changed). Read ${CLAUDE_PLUGIN_ROOT}/hooks/auto-update-prompt.md and update the graph.' || true; else true; fi"
+            "command": "if [ -f .understand-anything/config.json ] && grep -q '\"autoUpdate\".*true' .understand-anything/config.json 2>/dev/null && [ -f .understand-anything/meta.json ] && [ -f .understand-anything/knowledge-graph.json ]; then stored=$(node -p \"try{JSON.parse(require('fs').readFileSync('.understand-anything/meta.json','utf8')).gitCommitHash}catch(e){''}\" 2>/dev/null); current=$(git rev-parse HEAD 2>/dev/null); [ -n \"$stored\" ] && [ -n \"$current\" ] && [ \"$stored\" != \"$current\" ] && echo \"[understand-anything] Knowledge graph stale (HEAD changed). Read ${CLAUDE_PLUGIN_ROOT}/hooks/auto-update-prompt.md and update the graph.\" || true; else true; fi"
           }
         ]
       }

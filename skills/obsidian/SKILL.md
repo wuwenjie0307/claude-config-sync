@@ -152,7 +152,7 @@ Every changelog MUST include: **改动类型** (checked), **改动内容**, **�
 
 ## Red Flags
 
-- Writing to the wrong path (project dir instead of vault) — double-check the path starts with `{{VAULT_PATH}}\`
+- Writing to the wrong path (project dir instead of vault) — double-check the path starts with `{{VAULT_PATH}}/`
 - Creating a bug record without root cause — wait and ask the user if cause is unknown
 - Adding a project without scanning its actual directory structure first
 - Jumping into debugging without checking vault for related past bugs — always load context first (Operation 0)
