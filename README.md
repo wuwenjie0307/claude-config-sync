@@ -57,6 +57,7 @@ Skill 文件中使用占位符而非硬编码路径，安装时自动替换：
 |---|---|
 | `obsidian` | Obsidian Vault 管理 — 项目添加、Bug 记录、更新日志、上下文加载 |
 | `mysql-query` | MySQL 直连查询（MCP 不可用时的备选方案） |
+| `image-vision` | 调用硅基流动 Qwen 视觉模型识别图片内容（API Key 需自行配置） |
 | `claude-config-sync` | 一键同步 Claude Code 配置到 GitHub |
 
 ### Plugin Skills（在 Claude Code 中运行安装命令）
@@ -113,6 +114,8 @@ claude-config-sync/
 └── skills/
     ├── obsidian/SKILL.md
     ├── mysql-query/SKILL.md
+    ├── image-vision/SKILL.md
+    ├── image-vision/vision.py
     └── claude-config-sync/SKILL.md
 ```
 
